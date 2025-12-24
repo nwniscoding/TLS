@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TLS exploration</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <nav class="sidebar">
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="#">Introduction</a></li>
+      <li><a href="#">Design</a></li>
+      <li><a href="#">Components</a></li>
+      <li><a href="#">Conclusion</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Introduction to Transport Layer Security</h1>
+    <p>
+      Transport Layer Security (TLS) is a cryptographic protocol designed to provide secure communication over a computer network. The crux of TLS lies in its ability to encrypt data, verify the integrity of messages, and authenticate communicating parties, ensuring that privacy and security are preserved during transmission  
+    </p>
+    <h2>Asymmetric and Symmetric Encryption</h2>
+    <p>
+      Data in TLS is protected using a combination of symmetric and asymmetric cryptography, each serving a distinct purpose. In some configurations, TLS may rely on a Pre-Shared Key (PSK), where both the client and server possess a shared secret before communication begins. This shared secret is used to authenticate the connection and to help derive encryption keys, making its confidentiality critical to the security of the session.
+    </p>
+    <p>
+      Asymmetric cryptography, by contrast, uses a pair of mathematically related keys: a public key and a private key. The public key may be freely distributed, while the private key remains known only to its owner. In TLS, asymmetric cryptography is primarily used during the handshake to establish trust and to securely agree upon shared secrets, which are then used to derive symmetric keys for encrypting application data.
+    </p>
+    <h2>MAC (Message Authentication Code)</h2>
+    <p>
+      A Message Authentication Code (MAC) is a short piece of information used to authenticate a message and to provide integrity and authenticity assurances on the message. In TLS, MACs are employed to ensure that the data has not been altered during transmission and that it originates from a legitimate source. The MAC is computed using a secret key and the message content, allowing the recipient to verify both the integrity and authenticity of the received data. The key used for the MAC is derived during the TLS handshake process, ensuring that only parties involved in the communication can generate and verify the MAC.
+    </p>
+  </main>
+  <footer>
+    <p>Written by AI, Content Provided by nwnisworking</p>
+  </footer>
+</body>
+</html>
